@@ -1,0 +1,161 @@
+/* Galaxy spiral trader badge & styling */
+
+.uex-circles-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
+  margin-left: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.uex-circles-badge:hover {
+  transform: scale(1.15) rotate(15deg);
+}
+
+.uex-circles-icon {
+  width: 17px;
+  height: 17px;
+  filter: drop-shadow(0 0 4px rgba(0, 242, 254, 0.6));
+  animation: uex-circles-spin 25s linear infinite;
+  display: inline-block;
+}
+
+@keyframes uex-circles-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.uex-circles-trader-nick {
+  position: relative;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 40%, #ff007a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600 !important;
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.35);
+  transition: all 0.2s ease-in-out;
+}
+
+.uex-circles-trader-nick:hover {
+  text-shadow: 0 0 16px rgba(0, 242, 254, 0.7);
+  filter: brightness(1.2);
+}
+
+.uex-circles-popover {
+  position: absolute;
+  z-index: 999999;
+  min-width: 240px;
+  max-width: 320px;
+  background: rgba(13, 17, 23, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 242, 254, 0.35);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.7), 0 0 20px 2px rgba(0, 242, 254, 0.25);
+  border-radius: 12px;
+  padding: 14px;
+  color: #f0f6fc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.uex-circles-popover.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.uex-circles-popover-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.uex-circles-popover-title {
+  font-weight: 700;
+  font-size: 14px;
+  background: linear-gradient(90deg, #00f2fe, #7928ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.uex-circles-popover-subtitle {
+  font-size: 11px;
+  color: #8b949e;
+}
+
+.uex-circles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.uex-circles-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 6px 8px;
+  transition: background 0.2s;
+}
+
+.uex-circles-item.shared {
+  background: rgba(0, 242, 254, 0.12);
+  border-color: rgba(0, 242, 254, 0.35);
+}
+
+.uex-circles-item-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  object-fit: cover;
+  background: #21262d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.uex-circles-item-name {
+  font-weight: 500;
+  color: #e6edf3;
+  flex-grow: 1;
+}
+
+.uex-circles-item-badge {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: rgba(0, 242, 254, 0.2);
+  color: #00f2fe;
+}
+
+.uex-circles-empty {
+  color: #8b949e;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  padding: 8px 0;
+}

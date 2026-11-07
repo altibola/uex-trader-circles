@@ -1,0 +1,16 @@
+{
+  "name": "@uex-circles/core",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Core business logic, RSI scrapers, caching layer, and circle matchers",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
