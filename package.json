@@ -1,0 +1,16 @@
+{
+  "name": "uex-trader-circles-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for UEX Trader Circles extension and core ecosystem",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "lint": "pnpm -r run lint",
+    "package": "pnpm --filter @uex-circles/extension run package"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
