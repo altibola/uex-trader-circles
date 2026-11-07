@@ -1,0 +1,21 @@
+{
+  "name": "@uex-circles/extension",
+  "version": "0.1.0",
+  "description": "UEX Trader Circles browser extension for Chrome, Safari, and Firefox",
+  "scripts": {
+    "build": "ts-node scripts/build.ts",
+    "package": "ts-node scripts/package.ts"
+  },
+  "dependencies": {
+    "@uex-circles/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6.0.3",
+    "@types/chrome": "^0.0.268",
+    "@types/node": "^20.14.9",
+    "archiver": "^7.0.1",
+    "esbuild": "^0.21.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
